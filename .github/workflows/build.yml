@@ -29,6 +29,9 @@ jobs:
       - name: Enable Gradle Wrapper
         run: chmod +x gradlew
 
+      - name: Generate Missing Gradle Wrapper
+        run: gradle wrapper
+
       - name: Build Release APK
         run: ./gradlew clean assembleRelease --no-daemon
 
